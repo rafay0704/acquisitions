@@ -1,6 +1,6 @@
-import aj from "#config/arcjet.js";
-import logger from "#config/logger.js";
-import { slidingWindow } from "@arcjet/node";
+import aj from '#config/arcjet.js';
+import logger from '#config/logger.js';
+import { slidingWindow } from '@arcjet/node';
 
 
 const securityMiddleware = async (req, res, next) => {
@@ -12,18 +12,18 @@ const securityMiddleware = async (req, res, next) => {
     let message;
 
     switch(role){
-        case 'admin':
-            limit = 20;
-            message = "Admin request limit exceeded (20) per minute";
-            break;
-        case 'user':
-            limit = 10;
-            message = "User request limit exceeded (10) per minute";
-            break;
-        case 'guest':
-            limit = 5;
-            message = "Guest request limit exceeded (5) per minute";
-            break;
+      case 'admin':
+        limit = 20;
+        message = 'Admin request limit exceeded (20) per minute';
+        break;
+      case 'user':
+        limit = 10;
+        message = 'User request limit exceeded (10) per minute';
+        break;
+      case 'guest':
+        limit = 5;
+        message = 'Guest request limit exceeded (5) per minute';
+        break;
     }
 
 
@@ -37,7 +37,7 @@ const securityMiddleware = async (req, res, next) => {
 
       return res.status(403).json({ error: 'Forbidden', message: 'Automated requests are not allowed' });
     } 
-     if (decision.isDenied && decision.reason.isShield()) {
+    if (decision.isDenied && decision.reason.isShield()) {
       logger.warn(`Shield request blocked by security middleware: ${decision.reason}` ,
         {ip : req.ip, userAgent : req.get['User-Agent'] , path : req.path , method: req.method}
       );
@@ -45,7 +45,7 @@ const securityMiddleware = async (req, res, next) => {
       return res.status(403).json({ error: 'Forbidden', message: 'Automated requests are not allowed' });
     }  
 
-     if (decision.isDenied && decision.reason.isRateLimit()) {
+    if (decision.isDenied && decision.reason.isRateLimit()) {
       logger.warn(`Rate limit exceeded by security middleware: ${decision.reason}` ,
         {ip : req.ip, userAgent : req.get['User-Agent'] , path : req.path}
       );
@@ -56,9 +56,9 @@ const securityMiddleware = async (req, res, next) => {
    
 
   } catch (error) {
-   console.error('Error in security middleware:', error);
-   logger.error('Error in security middleware:', error);
-   res.status(500).json({ error: 'Internal Server Error' , message  : "Security check failed middleware" });
+    console.error('Error in security middleware:', error);
+    logger.error('Error in security middleware:', error);
+    res.status(500).json({ error: 'Internal Server Error' , message  : 'Security check failed middleware' });
    
   }
 };
