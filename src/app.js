@@ -4,7 +4,9 @@ import helmet from 'helmet';
 import morgan from 'morgan';
 import cors from 'cors';
 import cookieParser from 'cookie-parser';
-import authRoutes from '#routes/user.routes.js';
+import authRoutes from '#routes/auth.routes.js';
+import userRoutes from '#routes/user.routes.js'
+
 import { timestamp } from 'drizzle-orm/gel-core';
 import securityMiddleware from './middleware/security.middleware.js';
 
@@ -20,7 +22,9 @@ app.use(
     stream: { write: message => logger.info(message.trim()) },
   })
 );
-app.use(securityMiddleware);
+// app.use(securityMiddleware);
+
+
 app.get('/', (req, res) => {
   logger.info('Hello, From Acquisitions! from Logger');
   res.status(200).send('Hello, From Acquisitions!');
@@ -41,5 +45,6 @@ app.get('/api', (req, res) => {
 });
 
 app.use('/api/auth', authRoutes);
+app.use('/api/users', userRoutes);
 
 export default app;

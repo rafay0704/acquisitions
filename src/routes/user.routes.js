@@ -1,12 +1,29 @@
 import express from 'express';
-import { signup, signin, signout } from '#controllers/auth.controller.js';
+import {
+  fetchAllUsers,
+  fetchUserById,
+  updateUserById,
+  deleteUserById,
+} from '#controllers/users.controller.js';
+import { authenticateToken, requireRole } from '#middleware/auth.middleware.js';
 
 const router = express.Router();
 
-router.post('/sign-up', signup);
+// GET /users - Get all users (admin only)
+router.get('/', authenticateToken, fetchAllUsers);
 
-router.post('/sign-in', signin);
+// GET /users/:id - Get user by ID (authenticated users only)
+router.get('/:id', authenticateToken, fetchUserById);
 
-router.post('/sign-out', signout);
+// PUT /users/:id - Update user by ID (authenticated users can update own profile, admin can update any)
+router.put('/:id', authenticateToken, updateUserById);
+
+// DELETE /users/:id - Delete user by ID (admin only)
+router.delete(
+  '/:id',
+  authenticateToken,
+  requireRole(['admin']),
+  deleteUserById
+);
 
 export default router;
