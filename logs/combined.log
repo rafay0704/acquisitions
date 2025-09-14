@@ -1,0 +1,66 @@
+{"level":"info","message":"Hello, From Acquisitions! from Logger","service":"acquisitions-api"}
+{"level":"info","message":"::1 - - [13/Sep/2025:19:33:43 +0000] \"GET / HTTP/1.1\" 304 - \"-\" \"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/140.0.0.0 Safari/537.36\"","service":"acquisitions-api"}
+{"level":"info","message":"::1 - - [13/Sep/2025:19:33:44 +0000] \"GET /logo.png HTTP/1.1\" 404 147 \"-\" \"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/140.0.0.0 Safari/537.36\"","service":"acquisitions-api"}
+{"level":"info","message":"Hello,from health log","service":"acquisitions-api"}
+{"level":"info","message":"::1 - - [13/Sep/2025:19:36:26 +0000] \"GET /health HTTP/1.1\" 200 25 \"-\" \"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/140.0.0.0 Safari/537.36\"","service":"acquisitions-api"}
+{"level":"info","message":"::1 - - [13/Sep/2025:19:36:28 +0000] \"GET /logo.png HTTP/1.1\" 404 147 \"-\" \"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/140.0.0.0 Safari/537.36\"","service":"acquisitions-api"}
+{"level":"info","message":"::1 - - [13/Sep/2025:19:47:12 +0000] \"GET /api/auth/sign-in HTTP/1.1\" 404 155 \"-\" \"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/140.0.0.0 Safari/537.36\"","service":"acquisitions-api"}
+{"level":"info","message":"::1 - - [13/Sep/2025:19:47:14 +0000] \"GET /api/auth/logo.png HTTP/1.1\" 404 156 \"-\" \"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/140.0.0.0 Safari/537.36\"","service":"acquisitions-api"}
+{"level":"info","message":"::1 - - [13/Sep/2025:19:52:34 +0000] \"GET /health HTTP/1.1\" 200 74 \"-\" \"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/140.0.0.0 Safari/537.36\"","service":"acquisitions-api"}
+{"level":"info","message":"::1 - - [13/Sep/2025:19:52:48 +0000] \"GET /logo.png HTTP/1.1\" 404 147 \"-\" \"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/140.0.0.0 Safari/537.36\"","service":"acquisitions-api"}
+{"level":"info","message":"::1 - - [13/Sep/2025:19:52:54 +0000] \"GET /health HTTP/1.1\" 200 74 \"-\" \"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/140.0.0.0 Safari/537.36\"","service":"acquisitions-api"}
+{"level":"info","message":"::1 - - [13/Sep/2025:19:52:55 +0000] \"GET /logo.png HTTP/1.1\" 404 147 \"-\" \"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/140.0.0.0 Safari/537.36\"","service":"acquisitions-api"}
+{"level":"info","message":"::1 - - [13/Sep/2025:19:52:58 +0000] \"GET /health HTTP/1.1\" 200 74 \"-\" \"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/140.0.0.0 Safari/537.36\"","service":"acquisitions-api"}
+{"level":"info","message":"::1 - - [13/Sep/2025:19:52:59 +0000] \"GET /logo.png HTTP/1.1\" 404 147 \"-\" \"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/140.0.0.0 Safari/537.36\"","service":"acquisitions-api"}
+{"level":"info","message":"::1 - - [13/Sep/2025:19:53:06 +0000] \"GET /api/objects HTTP/1.1\" 404 150 \"-\" \"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/140.0.0.0 Safari/537.36\"","service":"acquisitions-api"}
+{"level":"info","message":"::1 - - [13/Sep/2025:19:53:06 +0000] \"GET /api/logo.png HTTP/1.1\" 404 151 \"-\" \"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/140.0.0.0 Safari/537.36\"","service":"acquisitions-api"}
+{"level":"info","message":"::1 - - [13/Sep/2025:19:53:10 +0000] \"GET /api/ HTTP/1.1\" 200 43 \"-\" \"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/140.0.0.0 Safari/537.36\"","service":"acquisitions-api"}
+{"level":"info","message":"::1 - - [13/Sep/2025:19:53:10 +0000] \"GET /api/logo.png HTTP/1.1\" 404 151 \"-\" \"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/140.0.0.0 Safari/537.36\"","service":"acquisitions-api"}
+{"level":"info","message":"::1 - - [13/Sep/2025:19:53:16 +0000] \"GET /health HTTP/1.1\" 200 74 \"-\" \"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/140.0.0.0 Safari/537.36\"","service":"acquisitions-api"}
+{"level":"info","message":"::1 - - [13/Sep/2025:19:53:17 +0000] \"GET /logo.png HTTP/1.1\" 404 147 \"-\" \"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/140.0.0.0 Safari/537.36\"","service":"acquisitions-api"}
+{"level":"info","message":"::1 - - [13/Sep/2025:19:57:41 +0000] \"GET /health HTTP/1.1\" 200 74 \"-\" \"HTTPie\"","service":"acquisitions-api"}
+{"level":"info","message":"::1 - - [13/Sep/2025:19:57:48 +0000] \"GET /health HTTP/1.1\" 200 75 \"-\" \"HTTPie\"","service":"acquisitions-api"}
+{"level":"info","message":"Hello, From Acquisitions! from Logger","service":"acquisitions-api"}
+{"level":"info","message":"::1 - - [13/Sep/2025:20:01:48 +0000] \"GET / HTTP/1.1\" 200 25 \"-\" \"HTTPie\"","service":"acquisitions-api"}
+{"level":"info","message":"::1 - - [13/Sep/2025:20:02:04 +0000] \"GET /api HTTP/1.1\" 200 43 \"-\" \"HTTPie\"","service":"acquisitions-api"}
+{"level":"info","message":"::1 - - [13/Sep/2025:20:02:37 +0000] \"POST /api/auth/sign-in HTTP/1.1\" 200 31 \"-\" \"HTTPie\"","service":"acquisitions-api"}
+{"level":"info","message":"::1 - - [14/Sep/2025:11:04:24 +0000] \"POST /api/auth/sign-up HTTP/1.1\" 400 59 \"-\" \"HTTPie\"","service":"acquisitions-api"}
+{"level":"info","message":"User signup successful:rafay@gmail.com","service":"acquisitions-api"}
+{"level":"info","message":"::1 - - [14/Sep/2025:11:05:33 +0000] \"POST /api/auth/sign-up HTTP/1.1\" 201 119 \"-\" \"HTTPie\"","service":"acquisitions-api"}
+{"level":"info","message":"User signup successful:rafay@gmail.com","service":"acquisitions-api"}
+{"level":"info","message":"::1 - - [14/Sep/2025:11:06:11 +0000] \"POST /api/auth/sign-up HTTP/1.1\" 201 119 \"-\" \"HTTPie\"","service":"acquisitions-api"}
+{"level":"info","message":"User signup successful:rafay@gmail.com","service":"acquisitions-api"}
+{"level":"info","message":"::1 - - [14/Sep/2025:11:06:14 +0000] \"POST /api/auth/sign-up HTTP/1.1\" 201 119 \"-\" \"HTTPie\"","service":"acquisitions-api"}
+{"level":"info","message":"User signup successful:rafay@gmail.com","service":"acquisitions-api"}
+{"level":"info","message":"::1 - - [14/Sep/2025:11:06:19 +0000] \"POST /api/auth/sign-up HTTP/1.1\" 201 119 \"-\" \"HTTPie\"","service":"acquisitions-api"}
+{"level":"info","message":"User signup successful:rafay@gmail.com","service":"acquisitions-api"}
+{"level":"info","message":"::1 - - [14/Sep/2025:11:06:19 +0000] \"POST /api/auth/sign-up HTTP/1.1\" 201 119 \"-\" \"HTTPie\"","service":"acquisitions-api"}
+{"level":"info","message":"User signup successful:rafay@gmail.com","service":"acquisitions-api"}
+{"level":"info","message":"::1 - - [14/Sep/2025:11:06:19 +0000] \"POST /api/auth/sign-up HTTP/1.1\" 201 119 \"-\" \"HTTPie\"","service":"acquisitions-api"}
+{"level":"info","message":"User signup successful:rafay@gmail.com","service":"acquisitions-api"}
+{"level":"info","message":"::1 - - [14/Sep/2025:11:06:20 +0000] \"POST /api/auth/sign-up HTTP/1.1\" 201 119 \"-\" \"HTTPie\"","service":"acquisitions-api"}
+{"level":"info","message":"::1 - - [14/Sep/2025:11:06:30 +0000] \"POST /api/auth/sign-up HTTP/1.1\" 400 59 \"-\" \"HTTPie\"","service":"acquisitions-api"}
+{"level":"info","message":"::1 - - [14/Sep/2025:11:39:04 +0000] \"POST /api/auth/sign-up HTTP/1.1\" 400 59 \"-\" \"HTTPie\"","service":"acquisitions-api"}
+{"level":"info","message":"User rafay@gmail.com created successfully","service":"acquisitions-api"}
+{"level":"info","message":"User signup successful:rafay@gmail.com","service":"acquisitions-api"}
+{"level":"info","message":"::1 - - [14/Sep/2025:11:39:14 +0000] \"POST /api/auth/sign-up HTTP/1.1\" 201 119 \"-\" \"HTTPie\"","service":"acquisitions-api"}
+{"level":"error","message":"Error creating the user: Error: User with this email already exists","service":"acquisitions-api"}
+{"level":"error","message":"Error in signup controller: User with this email already exists","service":"acquisitions-api","stack":"Error: User with this email already exists\n    at createUser (file:///D:/acquisitions/src/services/auth.service.js:34:13)\n    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)\n    at async signup (file:///D:/acquisitions/src/controllers/auth.controller.js:22:22)"}
+{"level":"info","message":"::1 - - [14/Sep/2025:11:39:19 +0000] \"POST /api/auth/sign-up HTTP/1.1\" 409 33 \"-\" \"HTTPie\"","service":"acquisitions-api"}
+{"level":"info","message":"User abdul@gmail.com created successfully","service":"acquisitions-api"}
+{"level":"info","message":"User signup successful:abdul@gmail.com","service":"acquisitions-api"}
+{"level":"info","message":"::1 - - [14/Sep/2025:11:40:02 +0000] \"POST /api/auth/sign-up HTTP/1.1\" 201 120 \"-\" \"HTTPie\"","service":"acquisitions-api"}
+{"level":"info","message":"User abdul@gmail.com authenticated successfully","service":"acquisitions-api"}
+{"level":"info","message":"User signin successful: abdul@gmail.com","service":"acquisitions-api"}
+{"level":"info","message":"::1 - - [14/Sep/2025:13:55:32 +0000] \"POST /api/auth/sign-in HTTP/1.1\" 200 119 \"-\" \"HTTPie\"","service":"acquisitions-api"}
+{"level":"info","message":"User signed out successfully","service":"acquisitions-api"}
+{"level":"info","message":"::1 - - [14/Sep/2025:13:55:47 +0000] \"POST /api/auth/sign-out HTTP/1.1\" 200 42 \"-\" \"HTTPie\"","service":"acquisitions-api"}
+{"level":"info","message":"User abdul@gmail.com authenticated successfully","service":"acquisitions-api"}
+{"level":"info","message":"User signin successful: abdul@gmail.com","service":"acquisitions-api"}
+{"level":"info","message":"::1 - - [14/Sep/2025:13:56:00 +0000] \"POST /api/auth/sign-in HTTP/1.1\" 200 119 \"-\" \"HTTPie\"","service":"acquisitions-api"}
+{"level":"info","message":"User abdo@gmail.com created successfully","service":"acquisitions-api"}
+{"level":"info","message":"User signup successful:abdo@gmail.com","service":"acquisitions-api"}
+{"level":"info","message":"::1 - - [14/Sep/2025:13:57:17 +0000] \"POST /api/auth/sign-up HTTP/1.1\" 201 114 \"-\" \"HTTPie\"","service":"acquisitions-api"}
+{"level":"info","message":"User abdo@gmail.com authenticated successfully","service":"acquisitions-api"}
+{"level":"info","message":"User signin successful: abdo@gmail.com","service":"acquisitions-api"}
+{"level":"info","message":"::1 - - [14/Sep/2025:13:57:58 +0000] \"POST /api/auth/sign-in HTTP/1.1\" 200 113 \"-\" \"HTTPie\"","service":"acquisitions-api"}
