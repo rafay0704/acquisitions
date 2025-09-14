@@ -1,0 +1,80 @@
+name: Tests
+
+on:
+  push:
+    branches: [main, staging]
+  pull_request:
+    branches: [main, staging]
+
+jobs:
+  test:
+    name: Run Tests
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20.x'
+          cache: 'npm'
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Run tests
+        run: npm test
+        env:
+          NODE_ENV: test
+          NODE_OPTIONS: --experimental-vm-modules
+          DATABASE_URL: ${{ secrets.DATABASE_URL || 'sqlite::memory:' }}
+        continue-on-error: true
+        id: tests
+
+      - name: Upload coverage reports
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: coverage-report
+          path: coverage/
+          retention-days: 30
+
+      - name: Generate test summary
+        if: always()
+        run: |
+          if [ -f coverage/lcov.info ]; then
+            # Extract coverage percentage from lcov.info if available
+            COVERAGE=$(grep -oP '(?<=^LF:)\d+' coverage/lcov.info | awk '{s+=$1} END {print s}')
+            COVERAGE_HIT=$(grep -oP '(?<=^LH:)\d+' coverage/lcov.info | awk '{s+=$1} END {print s}')
+            if [ ! -z "$COVERAGE" ] && [ ! -z "$COVERAGE_HIT" ] && [ "$COVERAGE" -gt 0 ]; then
+              COVERAGE_PERCENT=$(echo "scale=2; $COVERAGE_HIT * 100 / $COVERAGE" | bc -l)
+              echo "## Test Coverage Report 📊" >> $GITHUB_STEP_SUMMARY
+              echo "" >> $GITHUB_STEP_SUMMARY
+              echo "**Coverage: ${COVERAGE_PERCENT}%**" >> $GITHUB_STEP_SUMMARY
+              echo "" >> $GITHUB_STEP_SUMMARY
+              echo "- Total Lines: $COVERAGE" >> $GITHUB_STEP_SUMMARY
+              echo "- Lines Hit: $COVERAGE_HIT" >> $GITHUB_STEP_SUMMARY
+            else
+              echo "## Test Results ✅" >> $GITHUB_STEP_SUMMARY
+              echo "" >> $GITHUB_STEP_SUMMARY
+              echo "Coverage report generated successfully." >> $GITHUB_STEP_SUMMARY
+            fi
+          else
+            if [ "${{ steps.tests.outcome }}" == "success" ]; then
+              echo "## Test Results ✅" >> $GITHUB_STEP_SUMMARY
+              echo "" >> $GITHUB_STEP_SUMMARY
+              echo "All tests passed successfully!" >> $GITHUB_STEP_SUMMARY
+            else
+              echo "## Test Results ❌" >> $GITHUB_STEP_SUMMARY
+              echo "" >> $GITHUB_STEP_SUMMARY
+              echo "Some tests failed. Please check the logs above." >> $GITHUB_STEP_SUMMARY
+            fi
+          fi
+
+      - name: Annotate test failures
+        if: steps.tests.outcome == 'failure'
+        run: |
+          echo "::error title=Test Failures::Some tests failed. Please review the test output above and fix the failing tests before merging."
+          exit 1
