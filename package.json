@@ -28,7 +28,7 @@
     "db:migrate": "drizzle-kit migrate",
     "db:studio": "drizzle-kit studio",
     "build": "npm run lint && npm run format && npm run minify:js && npm run minify:css",
-  "test": "cross-env NODE_OPTIONS=--experimental-vm-modules jest --coverage",
+    "test": "cross-env NODE_OPTIONS=--experimental-vm-modules jest --coverage",
     "dev:docker": "powershell -ExecutionPolicy Bypass -File ./dev.ps1",
     "dev:prod": "powershell -ExecutionPolicy Bypass -File ./prod.ps1"
   },

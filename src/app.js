@@ -23,20 +23,17 @@ app.use(
 );
 app.use(securityMiddleware);
 
-
 app.get('/', (req, res) => {
   logger.info('Hello, From Acquisitions! from Logger');
   res.status(200).send('Hello, From Acquisitions!');
 });
 
 app.get('/health', (req, res) => {
-  res
-    .status(200)
-    .json({
-      status: 'OK',
-      timestamp: new Date().toISOString(),
-      uptime: process.uptime(),
-    });
+  res.status(200).json({
+    status: 'OK',
+    timestamp: new Date().toISOString(),
+    uptime: process.uptime(),
+  });
 });
 
 app.get('/api', (req, res) => {

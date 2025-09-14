@@ -83,7 +83,10 @@ export const signin = async (req, res, next) => {
   } catch (error) {
     logger.error('Error in signin controller:', error);
 
-    if (error.message === 'User not found' || error.message === 'Invalid password') {
+    if (
+      error.message === 'User not found' ||
+      error.message === 'Invalid password'
+    ) {
       return res.status(401).json({ error: 'Invalid email or password' });
     }
 
@@ -94,7 +97,7 @@ export const signin = async (req, res, next) => {
 export const signout = async (req, res, next) => {
   try {
     cookies.clear(res, 'token');
-    
+
     logger.info('User signed out successfully');
     res.status(200).json({
       message: 'User signed out successfully',
